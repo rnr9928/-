@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let answer="";
+       function base10ToString(n){
+  function part(a){
+    if (a == 0) return; // a가 0이 될 때까지 함수 돌린다 0이면 return
+    else {
+      part(Math.floor(a/2)); // 2를 나눈 몫을 넣는다
+      answer=answer+(a%2) // 나머지에 answer를 넣는다
+    }  
+  }
+  part(n)
+  return answer;
+}
+console.log(base10ToString(10000));
+    </script>
+</body>
+</html>
